@@ -276,7 +276,7 @@ header .navbarMain a:hover {
 
 .home .share {
     position: absolute;
-    top: 50rem;
+    top: 60rem;
     left: 12%;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);

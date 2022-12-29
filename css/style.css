@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
 :root {
     --green: #27ae60;
-    --black: #444;
-    --light-color: #777;
-    --bg-color: #e6e6e6;
-    --border: .1rem solid rgba(0, 0, 0, .2);
-    --box-shadow: .4rem .4rem 1rem #ccc,
-        -.4rem -.4rem 1rem #fff;
-    --box-shadow-inset: .4rem .4rem 1rem #ccc inset,
-        -.4rem -.4rem 1rem #fff inset;
+    --black: #fff;
+    --light-color: #ddd;
+    --bg-color: #222;
+    --border: .1rem solid rgba(0, 0, 0, .4);
+    --box-shadow: .4rem .4rem 1rem #111, -.4rem -.4rem 1rem #333;
+    --box-shadow-inset: .4rem .4rem 1rem #111 inset, -.4rem -.4rem 1rem #333 inset;
 }
 
 * {
@@ -36,14 +33,57 @@ body {
 }
 
 body.active {
-    --black: #fff;
-    --light-color: #ddd;
-    --bg-color: #222;
-    --border: .1rem solid rgba(0, 0, 0, .4);
-    --box-shadow: .4rem .4rem 1rem #111,
-        -.4rem -.4rem 1rem #333;
-    --box-shadow-inset: .4rem .4rem 1rem #111 inset,
-        -.4rem -.4rem 1rem #333 inset;
+    --black: #444;
+    --light-color: #777;
+    --bg-color: #e6e6e6;
+    --border: .1rem solid rgba(0, 0, 0, .2);
+    --box-shadow: .4rem .4rem 1rem #ccc, -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset: .4rem .4rem 1rem #ccc inset, -.4rem -.4rem 1rem #fff inset;
+}
+
+#menu-btn {
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color: var(--black);
+    background: var(--bg-color);
+    display: none;
+}
+
+#menu-btn:hover {
+    color: var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+#theme-toggler {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color: var(--black);
+    background: var(--bg-color);
+}
+
+#theme-toggler:hover {
+    color: var(--green);
+    box-shadow: var(--box-shadow-inset);
 }
 
 section {
@@ -111,6 +151,7 @@ header .navbar {
 }
 
 header .navbarMain a {
+    position: sticky;
     display: block;
     margin: 1.5rem 0;
     padding: .7rem;
@@ -187,51 +228,6 @@ header .navbarMain a:hover {
     color: var(--green);
 }
 
-#menu-btn {
-    position: fixed;
-    top: 1.5rem;
-    left: 2rem;
-    z-index: 1000;
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    color: var(--black);
-    background: var(--bg-color);
-    display: none;
-}
-
-#menu-btn:hover {
-    color: var(--green);
-    box-shadow: var(--box-shadow-inset);
-}
-
-#theme-toggler {
-    position: fixed;
-    top: 1.5rem;
-    right: 2rem;
-    z-index: 1000;
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    color: var(--black);
-    background: var(--bg-color);
-}
-
-#theme-toggler:hover {
-    color: var(--green);
-    box-shadow: var(--box-shadow-inset);
-}
-
 .home {
     position: relative;
     display: flex;
@@ -239,7 +235,6 @@ header .navbarMain a:hover {
     align-items: center;
     justify-content: first baseline;
     text-align: center;
-
 }
 
 .home .content h3 {
@@ -273,10 +268,9 @@ header .navbarMain a:hover {
     width: 400px;
 }
 
-
 .home .share {
     position: absolute;
-    top: 60rem;
+    top: 50rem;
     left: 12%;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
@@ -299,8 +293,6 @@ header .navbarMain a:hover {
     color: var(--green);
 }
 
-
-
 .about .row {
     display: flex;
     align-items: center;
@@ -315,7 +307,6 @@ header .navbarMain a:hover {
     gap: 1rem;
     flex-wrap: wrap;
 }
-
 
 .about .row .box-container .box {
     flex: 1 1 18rem;
@@ -336,7 +327,6 @@ header .navbarMain a:hover {
 .about .row .box-container .box img:hover {
     box-shadow: var(--box-shadow-inset);
     color: var(--green);
-
 }
 
 .about .row .box-container .box h3 {
@@ -370,6 +360,7 @@ header .navbarMain a:hover {
     font-size: 1.7rem;
     color: var(--light-color);
     line-height: 1.8;
+    text-transform: none;
     padding: 1rem 0;
 }
 
@@ -577,75 +568,47 @@ header .navbarMain a:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media queries  */
 
 @media (max-width:991px) {
-
     html {
         font-size: 55%;
     }
-
     body {
         padding-left: 0;
     }
-
     .header {
         left: -110%;
     }
-
     .header.active {
         left: 0%;
         transition: .4s linear;
     }
-
     #menu-btn {
         display: initial;
     }
-
 }
 
 @media (max-width:450px) {
-
     html {
         font-size: 50%;
     }
-
     .header {
         width: 100%;
         border-right: 0;
     }
-
     header .navbarMain {
         display: none;
     }
-
 }
 
 @media (max-width:950px) {
-
-
     header .navbarMain {
         display: none;
     }
-
     .home__img {
         display: none;
     }
-
     .home {
         position: relative;
         display: flex;
@@ -653,6 +616,5 @@ header .navbarMain a:hover {
         align-items: center;
         justify-content: center;
         text-align: center;
-
     }
 }

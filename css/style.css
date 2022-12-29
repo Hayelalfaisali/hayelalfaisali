@@ -692,6 +692,64 @@ header .navbarMain a:hover {
     }
 }
 
+@media only screen and (min-width:450px) and (max-width:500px) {
+    html {
+        font-size: 50%;
+    }
+    .header {
+        width: 100%;
+        border-right: 0;
+    }
+    header .navbarMain {
+        display: none;
+    }
+    #menu-btn {
+        display: none;
+    }
+    .home__blob {
+        margin-top: 2%;
+        height: 350px;
+        width: 350px;
+        margin-left: 30%;
+        fill: var(--black);
+    }
+    .home__blob-img {
+        height: 100%;
+        width: 100%;
+    }
+    .home__img {
+        left: -30%;
+        width: 600px;
+    }
+    .home {
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: center;
+    }
+    .home .content h3 {
+        margin-top: -80%;
+        margin-left: -10px;
+    }
+    .home .content p {
+        margin-left: -10px;
+    }
+    .btn {
+        margin-left: -10px;
+    }
+    .home .share {
+        top: 110%;
+        margin-left: -40px;
+    }
+    .home .share a {
+        height: 5rem;
+        width: 6rem;
+    }
+    .about .heading {
+        margin-top: 30%;
+    }
+}
+
 @media screen and (max-width:950px) {
     #menu-btn {
         display: initial;

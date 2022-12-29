@@ -24,8 +24,3 @@ themeToggler.onclick = () =>{
         document.body.classList.remove('active');
     }
 }
-social.onclick = () =>{
-
-    share.style.visibility="visible";
-    
-}

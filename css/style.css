@@ -125,7 +125,7 @@ section {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 260px;
+    width: 400px;
 }
 
 .home__blob {
@@ -133,7 +133,7 @@ section {
 }
 
 .home__blob-img {
-    width: 360px;
+    width: 400px;
 }
 
 header .navbarMain {
@@ -151,8 +151,6 @@ header .navbar {
 }
 
 header .navbarMain a {
-    position: sticky;
-    display: block;
     margin: 1.5rem 0;
     padding: .7rem;
     border-radius: 5rem;
@@ -270,7 +268,7 @@ header .navbarMain a:hover {
 
 .home .share {
     position: absolute;
-    top: 70rem;
+    top: 45rem;
     left: 12%;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
@@ -304,14 +302,15 @@ header .navbarMain a:hover {
 .about .row .box-container {
     flex: 1 1 40rem;
     display: flex;
+    width: 100%;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
 .about .row .box-container .box {
     flex: 1 1 18rem;
-    text-align: center;
     padding: 0;
+    width: 50%;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
 }
@@ -327,19 +326,6 @@ header .navbarMain a:hover {
 .about .row .box-container .box img:hover {
     box-shadow: var(--box-shadow-inset);
     color: var(--green);
-}
-
-.about .row .box-container .box h3 {
-    font-size: 5rem;
-    padding: 2rem;
-    color: var(--black);
-    line-height: 1.1;
-}
-
-.about .row .box-container .box p {
-    font-size: 1.7rem;
-    color: var(--light-color);
-    padding: .5rem 0;
 }
 
 .about .row .content {
@@ -570,7 +556,7 @@ header .navbarMain a:hover {
 
 /* media queries  */
 
-@media (max-width:991px) {
+@media screen and (max-width:992px) {
     html {
         font-size: 55%;
     }
@@ -585,11 +571,28 @@ header .navbarMain a:hover {
         transition: .4s linear;
     }
     #menu-btn {
-        display: initial;
+        display: none;
+    }
+    .home__img {
+        top: 25%;
+        width: 400px;
+    }
+    .home {
+        margin-left: 30px;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3 {
+        font-size: 6rem;
+    }
+    .home .share {
+        left: 10%;
     }
 }
 
-@media (max-width:450px) {
+@media screen and (max-width:450px) {
     html {
         font-size: 50%;
     }
@@ -600,21 +603,117 @@ header .navbarMain a:hover {
     header .navbarMain {
         display: none;
     }
+    #menu-btn {
+        display: none;
+    }
+    .home__img {
+        left: -8%;
+        width: 350px;
+    }
+    .home {
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: center;
+    }
+    .home .content h3 {
+        margin-left: -30px;
+        font-size: 4rem;
+        margin-top: -200px;
+    }
+    .btn {
+        top: 100%;
+        left: 10%;
+        margin-bottom: 50%;
+    }
+    .home .share {
+        top: 100%;
+        left: -50%;
+    }
+    .about .heading {
+        margin-top: 30%;
+    }
 }
 
-@media (max-width:950px) {
+@media screen and (max-width:350px) {
+    html {
+        font-size: 50%;
+    }
+    .header {
+        width: 100%;
+        border-right: 0;
+    }
+    header .navbarMain {
+        display: none;
+    }
+    #menu-btn {
+        display: none;
+    }
+    .home__blob {
+        margin-top: 2%;
+        height: 300px;
+        width: 300px;
+        margin-left: -30px;
+        fill: var(--black);
+    }
+    .home__blob-img {
+        height: 450px;
+        width: 450px;
+    }
+    .home__img {
+        left: -30%;
+        width: 600px;
+    }
+    .home {
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: center;
+    }
+    .home .content h3 {
+        margin-left: -90px;
+    }
+    .home .content p {
+        margin-left: -100px;
+    }
+    .btn {
+        margin-left: -100px;
+    }
+    .home .share {
+        top: 100%;
+        margin-left: -45px;
+    }
+    .home .share a {
+        height: 5rem;
+        width: 4rem;
+    }
+    .about .heading {
+        margin-top: 30%;
+    }
+}
+
+@media screen and (max-width:950px) {
+    #menu-btn {
+        display: initial;
+    }
     header .navbarMain {
         display: none;
     }
     .home__img {
-        display: none;
+        top: 35%;
+        width: 300px;
     }
     .home {
-        position: relative;
-        display: flex;
+        margin-left: 100px;
         flex-flow: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         text-align: center;
+    }
+    .home .content h3 {
+        font-size: 4rem;
+    }
+    .home .share {
+        left: 3%;
     }
 }
